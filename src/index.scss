@@ -81,6 +81,7 @@ body {
 
 .btn {
   color: inherit;
+  font-weight: 800;
   background-color: transparent;
   text-transform: uppercase;
   text-decoration: none;
@@ -96,6 +97,16 @@ body {
   top: 65%;
   right: 50%;
   transform: translate(50%, 50%);
+
+  @media (max-width: 600px) {
+    top: 33%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 1rem;
+}
+
 }
 
 .password-recovery {
@@ -109,4 +120,30 @@ body {
 
 .password-recovery a:hover {
   text-decoration-line: underline;
+}
+
+.hide-text {
+  color: transparent;
+}
+
+.fadein-anim{
+  animation: fadeIn 1s linear ;
+}
+
+
+@keyframes fadeIn {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: block;
+      opacity: 0;
+  }
+
+  100% {
+      display: block;
+      opacity: 1;
+  }
 }

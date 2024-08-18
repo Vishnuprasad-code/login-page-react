@@ -38,7 +38,7 @@ function IntroMessage() {
 function AuthBox() {
 
   const [showLogin, setShowLogin] = useState(true);
-
+  console.log(showLogin)
   function handleAuth() {
     setShowLogin(!showLogin);
   }
