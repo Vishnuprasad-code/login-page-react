@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100%;
 
-    color: whitesmoke;
+    color: rgb(var(--light-blue-rgb));
 
     display: flex;
     flex-direction: row;
@@ -18,7 +18,6 @@
     &-login {
         width: 40vw;
         color: inherit;
-        /* border: 1px solid red; */
 
         display: flex;
         flex-direction: column;

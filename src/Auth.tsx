@@ -64,7 +64,7 @@ export function SignUpBox({ showLogin }: { showLogin: boolean }) {
               <label className="auth-form-field-label" htmlFor="password">
                 Password
               </label>
-              <button className="btn" type="submit">
+              <button className="btn btn-auth-form" type="submit">
                 Sign Up
               </button>
             </form>
@@ -130,7 +130,7 @@ export function LoginBox({ showLogin }: { showLogin: boolean }) {
               <div className="password-recovery">
                 <a href="">Forgot your password?</a>
               </div>
-              <button className="btn" type="submit">
+              <button className="btn btn-auth-form" type="submit">
                 Sign In
               </button>
             </form>
@@ -149,7 +149,13 @@ export function Slider({
   handleAuth: () => void;
 }) {
   const [classes, setClasses] = useState("slider");
+  const [btnClasses, setBtnClasses] = useState("btn btn-intro btn-intro-signup");
   const onceClicked = useRef(false);
+
+  let btnToRender = "SIGN IN";
+  if (showLogin) {
+    btnToRender = "SIGN UP";
+  }
 
   useLayoutEffect(() => {
     if (!onceClicked.current) {
@@ -157,8 +163,15 @@ export function Slider({
     }
 
     setClasses("slider slider-stretch");
+    setBtnClasses("btn btn-intro hide-text")
     const countdownInterval = setTimeout(() => {
       setClasses("slider");
+      if (showLogin) {
+        setBtnClasses("btn btn-intro btn-intro-signup")
+      }
+      else{
+        setBtnClasses("btn btn-intro btn-intro-login")
+      }
     }, 500);
 
     return () => {
@@ -166,13 +179,9 @@ export function Slider({
     };
   }, [showLogin]);
 
-  let btnToRender = "SIGN IN";
-  if (showLogin) {
-    btnToRender = "SIGN UP";
-  }
   return (
     <div className={classes}>
-      <button className="btn btn-intro" onClick={() => {
+      <button className={btnClasses} onClick={() => {
         handleAuth(); onceClicked.current = true;
       }}>
         {btnToRender}
