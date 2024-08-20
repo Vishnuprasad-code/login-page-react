@@ -1,6 +1,11 @@
 import {useState, useRef, useLayoutEffect } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+import  gplusIcon from "./assets/icons8-google-plus.svg"
+import fbIcon from "./assets/icons8-facebook.svg"
+import linkedinIcon from "./assets/icons8-linked-in.svg"
+
+
 export function SignUpBox({ showLogin }: { showLogin: boolean }) {
   return (
     <TransitionGroup className="auth-section">
@@ -16,17 +21,17 @@ export function SignUpBox({ showLogin }: { showLogin: boolean }) {
               <span className="icon__init_text">or join with:</span>
               <img
                 className="icon__img"
-                src="./assets/icons8-google-plus.svg"
+                src={gplusIcon}
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="./assets/icons8-facebook.svg"
+                src={fbIcon}
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="./assets/icons8-linked-in.svg"
+                src={linkedinIcon}
                 alt="no image"
               />
             </div>
@@ -90,17 +95,17 @@ export function LoginBox({ showLogin }: { showLogin: boolean }) {
               <span className="icon__init_text">or sign in with:</span>
               <img
                 className="icon__img"
-                src="./assets/icons8-google-plus.svg"
+                src={gplusIcon}
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="./assets/icons8-facebook.svg"
+                src={fbIcon}
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="./assets/icons8-linked-in.svg"
+                src={linkedinIcon}
                 alt="no image"
               />
             </div>
