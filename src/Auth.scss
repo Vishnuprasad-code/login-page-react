@@ -1,0 +1,186 @@
+.auth {
+    position: absolute;
+    left: -60vw;
+    width: 160vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    transition: transform 1s linear;
+
+    @media (max-width: 600px) {
+        left: -90vw;
+        width: 190vw;
+        height: 100%;
+    }
+
+    &-section {
+        flex: 0 0 60vw;
+        background-color: rgb(var(--light-blue-rgb));
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow-x: hidden;
+
+        @media (max-width: 600px) {
+            flex: 0 0 90vw;
+        }
+    }
+
+    &-form {
+        width: 100%;
+        color: rgb(var(--primary-blue-rgb));
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1000;
+
+        &__signup {
+            width: 55%;
+
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+
+            row-gap: 1rem;
+
+            &-enter {
+                opacity: 0;
+                transform: translateX(100vw);
+            }
+
+            &-enter-active {
+                opacity: 1;
+                transition: opacity 0.5s;
+                transform: translateX(0);
+                transition: transform 1s linear;
+            }
+
+            &-exit {
+                transform: translateX(0);
+            }
+
+            &-exit-active {
+                transform: translateX(100vw);
+                transition: transform 1s linear;
+            }
+        }
+
+        &__login {
+            width: 55%;
+
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+
+            row-gap: 1rem;
+
+            &-enter {
+                opacity: 0;
+                transform: translateX(-160vw);
+            }
+
+            &-enter-active {
+                opacity: 1;
+                transition: opacity 0.5s;
+                transform: translateX(0);
+                transition: transform 1s linear;
+            }
+
+            &-exit {
+                transform: translateX(0);
+            }
+
+            &-exit-active {
+                transform: translateX(-160vw);
+                transition: transform 1s linear;
+            }
+        }
+
+        &-field-box {
+            font-size: 1.5rem;
+            font-family: inherit;
+            color: rgb(var(--dark-blue-rgb));
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            background-color: rgba(var(--secondary-blue-rgb), 0.2);
+            border: none;
+            width: 80%;
+            display: block;
+        }
+        &-field-box::-webkit-input-placeholder {
+            color: inherit;
+        }
+        &-field-box:placeholder-shown+&-field-label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+
+        &-field-label {
+            align-self: flex-start;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 12%;
+            display: block;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+
+    &__init_text {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+.slider {
+    position: relative;
+    color: rgb(var(--light-blue-rgb));
+  
+    flex: 1 0 auto;
+    width: 40vw;
+    height: 100%;
+  
+    transition: width 0.5s linear, transform 1s linear;
+
+    @media (max-width: 600px) {
+        width: 10vw;
+    }
+  }
+  
+  .slide-animation {
+    transform: translateX(60vw);
+
+    @media (max-width: 600px) {
+        transform: translateX(90vw);
+    }
+  }
+  
+  .slider-stretch {
+    width: 35%;
+
+    @media (max-width: 600px) {
+        width: 0%;
+    }
+  }

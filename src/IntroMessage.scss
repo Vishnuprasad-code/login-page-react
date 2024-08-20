@@ -1,0 +1,52 @@
+.intro {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+
+    color: rgb(var(--light-blue-rgb));
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    &-signup,
+    &-login {
+        width: 40vw;
+        color: inherit;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 2rem;
+    }
+}
+
+
+.btn-intro {
+    &-enter {
+        opacity: 0;
+        transform: translateX(-140vw);
+    }
+
+    &-enter-active {
+        opacity: 1;
+        transition: opacity 0.5s;
+        transform: translateX(0);
+        transition: transform 1s linear;
+    }
+
+    &-exit {
+        transform: translateX(0);
+    }
+
+    &-exit-active {
+        transform: translateX(-140vw);
+        transition: transform 1s linear;
+    }
+}
