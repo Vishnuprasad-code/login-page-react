@@ -55,7 +55,7 @@
 
             &-enter {
                 opacity: 0;
-                transform: translateX(80vw);
+                transform: translateX(100vw);
             }
 
             &-enter-active {
@@ -70,7 +70,7 @@
             }
 
             &-exit-active {
-                transform: translateX(80vw);
+                transform: translateX(100vw);
                 transition: transform 1s linear;
             }
         }
@@ -88,7 +88,7 @@
 
             &-enter {
                 opacity: 0;
-                transform: translateX(-140vw);
+                transform: translateX(-160vw);
             }
 
             &-enter-active {
@@ -103,7 +103,7 @@
             }
 
             &-exit-active {
-                transform: translateX(-140vw);
+                transform: translateX(-160vw);
                 transition: transform 1s linear;
             }
         }
@@ -178,7 +178,7 @@
   }
   
   .slider-stretch {
-    width: 40%;
+    width: 35%;
     @media (max-width: 600px) {
         width: 0%;
     }
