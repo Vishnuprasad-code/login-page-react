@@ -16,17 +16,17 @@ export function SignUpBox({ showLogin }: { showLogin: boolean }) {
               <span className="icon__init_text">or join with:</span>
               <img
                 className="icon__img"
-                src="src/assets/icons8-google-plus.svg"
+                src=".src/assets/icons8-google-plus.svg"
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="src/assets/icons8-facebook.svg"
+                src=".src/assets/icons8-facebook.svg"
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="src/assets/icons8-linked-in.svg"
+                src=".src/assets/icons8-linked-in.svg"
                 alt="no image"
               />
             </div>
@@ -90,17 +90,17 @@ export function LoginBox({ showLogin }: { showLogin: boolean }) {
               <span className="icon__init_text">or sign in with:</span>
               <img
                 className="icon__img"
-                src="src/assets/icons8-google-plus.svg"
+                src=".src/assets/icons8-google-plus.svg"
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="src/assets/icons8-facebook.svg"
+                src=".src/assets/icons8-facebook.svg"
                 alt="no image"
               />
               <img
                 className="icon__img"
-                src="src/assets/icons8-linked-in.svg"
+                src=".src/assets/icons8-linked-in.svg"
                 alt="no image"
               />
             </div>
