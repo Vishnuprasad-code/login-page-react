@@ -1,7 +1,7 @@
 .auth {
     position: absolute;
     left: -60vw;
-    width: 160vw;
+    width: 161vw;
     height: 100%;
 
     display: flex;
@@ -178,7 +178,7 @@
   }
   
   .slider-stretch {
-    width: 35%;
+    width: 40%;
 
     @media (max-width: 600px) {
         width: 0%;
